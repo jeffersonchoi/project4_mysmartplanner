@@ -3,7 +3,7 @@
 <%= form_for @trip do |f| %>
 <div>
   <%= f.label :destination %>
-  <%= f.country_select :destination %>
+  <%= f.country_select :destination, ["United States"]  %>
 </div>
 <div>
   <%= f.label :start_date, :class => "control-label"%>
