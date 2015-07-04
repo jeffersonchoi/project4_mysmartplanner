@@ -1,0 +1,31 @@
+
+
+
+<div class="container">
+  <div class="row">
+
+
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+    </div>
+
+    <div class="col-xs-12 col-sm-8 col-md-6 col-lg-4">
+      <h1>Log In</h1>
+      <%= form_for :login do |f| %>
+        <div>
+          <%= f.label :email %>
+          <%= f.text_field :email %>
+        </div>
+        <div>
+          <%= f.label :password %>
+          <%= f.password_field :password %>
+        </div>
+        <div>
+          <%= f.submit 'Log In', class: "btn btn-primary" %>
+        </div>
+      <% end %>
+    </div>
+
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+    </div>
+  </div>
+</div>
