@@ -1,0 +1,37 @@
+<h1> Pre Trip Survey </h1>
+
+<%= form_for @trip do |f| %>
+<div>
+  <%= f.label :destination %>
+  <%= f.text_field :destination %>
+</div>
+<div>
+  <%= f.label :start_date, :class => "control-label"%>
+  <%= f.date_select :start_date, :prompt => { :day => 'Select day', :month => 'Select month', :year => 'Select year' }  %>
+</div>
+<div>
+  <%= f.label :end_date, :class => "control-label"%>
+  <%= f.date_select :end_date, :prompt => { :day => 'Select day', :month => 'Select month', :year => 'Select year' }  %>
+</div>
+
+<div>
+  <%= f.label :budget %>
+  <%= f.number_field :budget, :class => 'text_field', :step => 'any' %>
+</div>
+
+<div>
+  <%= f.label :hours_per_day %>
+  <%= f.number_field :hours_per_day, :class => 'text_field', :step => 'any' %>
+</div>
+
+<div>
+  <%= f.label :interest %>
+  <%= f.select :interest, options_for_select([["Select One", ""], "Cell", "Work", "Office", "Home", "Other"]), :class => 'genForm_dropBox' %>
+</div>
+
+<div>
+  <%= f.submit class: "btn btn-primary" %>
+</div>
+
+
+<% end %>
