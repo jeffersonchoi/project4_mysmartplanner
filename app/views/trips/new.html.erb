@@ -3,7 +3,7 @@
 <%= form_for @trip do |f| %>
 <div>
   <%= f.label :destination %>
-  <%= f.text_field :destination %>
+  <%= f.country_select :destination %>
 </div>
 <div>
   <%= f.label :start_date, :class => "control-label"%>
@@ -15,7 +15,7 @@
 </div>
 
 <div>
-  <%= f.label :budget %>
+  <%= f.label :budget_in_usd %>
   <%= f.number_field :budget, :class => 'text_field', :step => 'any' %>
 </div>
 
