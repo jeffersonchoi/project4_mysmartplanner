@@ -28,7 +28,7 @@
             <ul class="nav navbar-nav navbar-right">
 
             <% if current_user %>
-              <li class="navbar-text"> <%= current_user.name %> </li>
+              <li class="navbar-text"> <%= current_user.first_name %> </li>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Account Settings <b class="caret"></b></a>
                   <ul class="dropdown-menu">
@@ -77,10 +77,7 @@
     </div>
   </form>
 
-  Logged in as <strong><%= current_user.name %></strong>.
-  <% if current_user.guest? %>
-    <%= link_to "Become a member", signup_path %>
-  <% end %>
+
 
 
 <%= yield %>
