@@ -15,7 +15,7 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">mySmartPlanner</a>
+            <a class="navbar-brand" href="/">mySmartPlanner</a>
         </div>
 
         <div class="collapse navbar-collapse" id="myNavbar">
@@ -40,7 +40,7 @@
               <li><%= link_to 'Log Out', logout_path, method: :delete, class:"glyphicon glyphicon-log-in" %></li>
             <% else %>
               <li><a href="/users/new"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-              <li><a data-toggle="modal" data-target="#loginModal"><span class="glyphicon glyphicon-log-in "></span> Login</a></li>
+              <li><a href="#" data-toggle="modal" data-target="#loginModal"><span class="glyphicon glyphicon-log-in "></span> Login</a></li>
             <% end %>
             </ul>
         </div>
@@ -60,19 +60,16 @@
               <div class="modal-body">
             <div class="form-group">
               <label class="control-label" for="email">User Email</label>
-                <%= f.email_field :email, class: 'form-control' %>
-              <!--   <input type="text" class="form-control" id="email" placeholder="Enter your user ID"> -->
+                <%= f.email_field :email, class: 'form-control', placeholder: "Enter your email"%>
             </div>
             <div class="form-group">
               <label class="control-label" for="password">Password</label>
-              <%= f.password_field :password, class: 'form-control' %>
-              <!--   <input type="password" class="form-control" id="password" placeholder="Enter your password"> -->
+              <%= f.password_field :password, class: 'form-control', placeholder: "Enter your password" %>
             </div>
               </div>
               <div class="modal-footer">
                   <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
                   <%= f.submit "Log in", class: "btn btn-primary" %>
-                <!-- <button type="submit" class="btn btn-primary">Login</button> -->
               </div>
               <% end %>
           </div>
