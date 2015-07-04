@@ -32,12 +32,12 @@
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Account Settings <b class="caret"></b></a>
                   <ul class="dropdown-menu">
-                    <li><a href="#">Edit my account</a></li>
-                    <li><a href="#">View my itinerary</a></li>
+                    <li><a href="#"><%= link_to "Edit My Account",edit_user_path(current_user)%></a></li>
+                    <li><a href="#">View my trips</a></li>
                     <li><a href="#">Page C - 3</a></li>
                   </ul>
               </li>
-              <li><%= link_to 'Log Out', logout_path, method: :delete, class:"glyphicon glyphicon-log-in" %></li>
+              <li><%= link_to ' Log Out', logout_path, method: :delete, class:"glyphicon glyphicon-log-in" %></li>
             <% else %>
               <li><a href="/users/new"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
               <li><a href="#" data-toggle="modal" data-target="#loginModal"><span class="glyphicon glyphicon-log-in "></span> Login</a></li>
