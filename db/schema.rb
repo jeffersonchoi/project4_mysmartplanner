@@ -11,10 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150704075404) do
+ActiveRecord::Schema.define(version: 20150704075535) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "itineraries", force: :cascade do |t|
+    t.integer  "trip_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "itineraries", ["trip_id"], name: "index_itineraries_on_trip_id", using: :btree
 
   create_table "trips", force: :cascade do |t|
     t.integer  "user_id"
@@ -41,5 +49,6 @@ ActiveRecord::Schema.define(version: 20150704075404) do
     t.datetime "updated_at",      null: false
   end
 
+  add_foreign_key "itineraries", "trips"
   add_foreign_key "trips", "users"
 end
