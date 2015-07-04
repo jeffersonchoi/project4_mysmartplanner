@@ -11,10 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150704075900) do
+ActiveRecord::Schema.define(version: 20150704080032) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "events", force: :cascade do |t|
+    t.integer  "itinerary_id"
+    t.integer  "node_id"
+    t.time     "start_time"
+    t.time     "end_time"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  add_index "events", ["itinerary_id"], name: "index_events_on_itinerary_id", using: :btree
+  add_index "events", ["node_id"], name: "index_events_on_node_id", using: :btree
 
   create_table "itineraries", force: :cascade do |t|
     t.integer  "trip_id"
@@ -60,6 +72,8 @@ ActiveRecord::Schema.define(version: 20150704075900) do
     t.datetime "updated_at",      null: false
   end
 
+  add_foreign_key "events", "itineraries"
+  add_foreign_key "events", "nodes"
   add_foreign_key "itineraries", "trips"
   add_foreign_key "trips", "users"
 end
