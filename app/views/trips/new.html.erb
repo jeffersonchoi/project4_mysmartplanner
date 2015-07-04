@@ -7,11 +7,11 @@
 </div>
 <div>
   <%= f.label :start_date, :class => "control-label"%>
-  <%= f.date_select :start_date, :prompt => { :day => 'Select day', :month => 'Select month', :year => 'Select year' }  %>
+  <%= f.date_select :start_date, :start_year => Date.today.year, :prompt => { :day => 'Select day', :month => 'Select month', :year => 'Select year' }  %>
 </div>
 <div>
   <%= f.label :end_date, :class => "control-label"%>
-  <%= f.date_select :end_date, :prompt => { :day => 'Select day', :month => 'Select month', :year => 'Select year' }  %>
+  <%= f.date_select :end_date, :start_year => Date.today.year,:prompt => { :day => 'Select day', :month => 'Select month', :year => 'Select year' }  %>
 </div>
 
 <div>
