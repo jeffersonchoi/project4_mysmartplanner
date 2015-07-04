@@ -1,0 +1,20 @@
+<h1> <%= @user.first_name %>'s details</h1>
+
+<table>
+	<tr>
+		<th> First Name </th>
+		<th> Last Name </th>
+    <th> Email </th>
+    <th> Date of Birth </th>
+
+	</tr>
+
+		<tr>
+			<td> <%= @user.first_name %> </td>
+			<td> <%= @user.last_name %> </td>
+      <td> <%= @user.email %> </td>
+      <td> <%= @user.date_of_birth %> </td>
+
+		</tr>
+</table>
+<%= link_to "Back to Users' Lists", users_path %>

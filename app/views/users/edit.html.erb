@@ -1,0 +1,54 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+    </div>
+
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+
+<h1>Edit</h1>
+    <%= form_for @user do |f| %>
+      <div>
+        <%= f.label :first_name %>
+        <%= f.text_field :first_name %>
+      </div>
+      <div>
+        <%= f.label :last_name %>
+        <%= f.text_field :last_name %>
+      </div>
+      <div>
+        <%= f.label :email %>
+        <%= f.text_field :email %>
+      </div>
+
+      <div>
+        <%= f.label :gender %>
+
+        <%= f.radio_button :gender, 'male' %>
+        <%= f.label :male%>
+
+        <%= f.radio_button :gender, 'female' %>
+        <%= f.label :female %>
+      </div>
+
+      <div>
+        <%= f.label :date_of_bith %>
+        <%= f.date_select(:date_of_birth, :start_year => 1940) %>
+      </div>
+
+      <div>
+        <%= f.label :password %>
+        <%= f.password_field :password %>
+      </div>
+      <div>
+        <%= f.label :password_confirmation %>
+        <%= f.password_field :password_confirmation %>
+      </div>
+      <div>
+        <%= f.submit class: "btn btn-primary" %>
+      </div>
+    <% end %>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+    </div>
+  </div>
+</div>
