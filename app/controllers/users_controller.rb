@@ -13,7 +13,7 @@ class UsersController < ApplicationController
    end
 
    def create
-     @user = User.new(user_params)
+     @user = (user_params) ? User.new(user_params) : User.new_guest
      if @user.save
        session[:user_id] = @user.id.to_s
        redirect_to users_path
@@ -39,7 +39,7 @@ class UsersController < ApplicationController
 private
 
    def user_params
-     params.require(:user).permit(:first_name, :last_name, :gender, :email, :password, :password_confirmation, :date_of_birth)
+     params.permit(:first_name, :last_name, :gender, :email, :password, :password_confirmation, :dob)
    end
 
 end
