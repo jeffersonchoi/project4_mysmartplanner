@@ -47,17 +47,6 @@
       </div>
   </nav>
 
-  <div class="container">
-    <div class="jumbotron">
-      <h1>Hello, welcome to my website!</h1>
-      <p>Watch this page grow as we use more and more components from Bootstrap!</p>
-      <a href="#" class="btn btn-primary btn-lg">More Detail <span class="glyphicon glyphicon-chevron-right"></span></a>
-    </div>
-  </div>
-
-  <div class="container">
-
-  </div>
 
 
 
@@ -67,12 +56,8 @@
 
 
 
-  <% if current_user %>
-    Logged in as: <%= current_user.first_name %> <%= link_to 'Log Out', logout_path, method: :delete %>
-  <% else %>
-    <%= link_to 'Log In', login_path %>
-    <%= link_to 'Sign Up', new_user_path %>
-  <% end %>
+
+
 <%= yield %>
 
 </body>
