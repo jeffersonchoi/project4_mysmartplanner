@@ -5,7 +5,7 @@ User.create ([
   ])
 
 Node.create([
-  {node_name: "Node 1"},
+  {node_name: "Universal Studios Hollywood", lat: 34.1381168, long: -118.3533783, address: "100 Universal City Plaza, Los Angeles, CA 91608", feature: "places", subfeature: "Theme Parks"},
   {node_name: "Node 2"},
   {node_name: "Node 3"}
   ])
