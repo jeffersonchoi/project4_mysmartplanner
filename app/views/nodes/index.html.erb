@@ -1,0 +1,15 @@
+<h1>Nodes</h1>
+
+
+<table>
+  <tr>
+    <th> Name </th>
+    <th> Address </th>
+  </tr>
+  <% @nodes.each do |node| %>
+  <tr>
+    <td><%= node.node_name %></td>
+    <td><%= node.address %></td>
+  </tr>
+  <% end %>
+</table>
