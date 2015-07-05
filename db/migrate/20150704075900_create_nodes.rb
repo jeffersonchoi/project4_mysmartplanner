@@ -5,8 +5,8 @@ class CreateNodes < ActiveRecord::Migration
       t.float :lat
       t.float :long
       t.string :address
-      t.string :type
-      t.string :subtype
+      t.string :feature
+      t.string :subfeature
 
       t.timestamps null: false
     end

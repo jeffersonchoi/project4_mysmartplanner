@@ -41,8 +41,8 @@ ActiveRecord::Schema.define(version: 20150704191636) do
     t.float    "lat"
     t.float    "long"
     t.string   "address"
-    t.string   "type"
-    t.string   "subtype"
+    t.string   "feature"
+    t.string   "subfeature"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
