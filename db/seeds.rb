@@ -1,5 +1,5 @@
 User.create ([
-  {first_name: "Jefferson", last_name: "Choi", email: "jeffersonchoi@gmail.com", password_digest: "123", dob: "1991-9-12", gender: "male"},
+  {first_name: "Jefferson", last_name: "Choi", email: "jeffersonchoi@gmail.com", password: "123", password_confirmation: "123", dob: "1991-9-12", gender: "male"},
   {first_name: "User 2"},
   {first_name: "User 3"}
   ])
