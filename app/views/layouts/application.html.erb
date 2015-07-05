@@ -20,7 +20,8 @@
 
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
-              <li class="active"><a href="#">Home</a></li>
+              <li class="active"><a href="/">Home</a></li>
+              <li><a href="/nodes">Attractions</a></li>
               <li><a href="/trips/new">Create a trip</a></li>
               <li><a href="#">Page B</a></li>
 
@@ -48,19 +49,19 @@
   </nav>
 
 
-  <form action="/users" method="post" id="loginForm">
+  <form action="/login" method="post" id="loginForm">
     <div class="modal fade" id="loginModal" tabindex="-1">
         <div class="modal-dialog modal-sm">
           <div class="modal-content">
               <div class="modal-header">
-                <%= form_for(:user, url: login_path) do |f| %>
+                <%= form_for(:login) do |f| %>
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
                 <h4 class="modal-title">Login</h4>
               </div>
               <div class="modal-body">
             <div class="form-group">
               <label class="control-label" for="email">User Email</label>
-                <%= f.email_field :email, class: 'form-control', placeholder: "Enter your email"%>
+                <%= f.text_field :email, class: 'form-control', placeholder: "Enter your email"%>
             </div>
             <div class="form-group">
               <label class="control-label" for="password">Password</label>
