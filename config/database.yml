@@ -24,8 +24,7 @@ default: &default
 development:
   <<: *default
   database: project4_mysmartplanner_development
-  username: rails
-  password: <%= ENV['APP_DATABASE_PASSWORD'] %>
+
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
@@ -82,5 +81,5 @@ test:
 production:
   <<: *default
   database: project4_mysmartplanner_production
-  username: project4_mysmartplanner
-  password: <%= ENV['PROJECT4_MYSMARTPLANNER_DATABASE_PASSWORD'] %>
+  username: rails
+  password: <%= ENV['APP_DATABASE_PASSWORD'] %>
