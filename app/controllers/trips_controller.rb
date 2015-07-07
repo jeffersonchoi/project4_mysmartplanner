@@ -18,7 +18,11 @@ class TripsController < ApplicationController
     @trip.user_id = current_user.id
 
     if @trip.save
-
+      event_ids = Node.where(subfeature: @trip.interest)
+      puts event_ids.inspect
+      puts "======================================================"
+      puts event_ids
+      puts "======================================================"
       # if @trip.hours_per_day % 3 == 0
         no_of_itinerary = (@trip.hours_per_day / 3).floor
         for i in 1..no_of_itinerary
@@ -27,7 +31,7 @@ class TripsController < ApplicationController
 
           if @add_itinerary.save
 
-            @add_event = Event.new(itinerary_id: @add_itinerary.id, node_id: @trip.interest )
+            # @add_event = Event.new(itinerary_id: @add_itinerary.id, node_id: @trip.interest )
 
           end
 
