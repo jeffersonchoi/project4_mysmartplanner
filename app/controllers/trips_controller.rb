@@ -19,10 +19,12 @@ class TripsController < ApplicationController
 
     if @trip.save
       event_ids = Node.where(subfeature: @trip.interest)
-      puts event_ids.inspect
-      puts "======================================================"
-      puts event_ids
-      puts "======================================================"
+
+      events = []
+      event_ids.each do |e|
+        events.push(e.id)
+      end
+
       # if @trip.hours_per_day % 3 == 0
         no_of_itinerary = (@trip.hours_per_day / 3).floor
         for i in 1..no_of_itinerary
@@ -31,7 +33,12 @@ class TripsController < ApplicationController
 
           if @add_itinerary.save
 
-            # @add_event = Event.new(itinerary_id: @add_itinerary.id, node_id: @trip.interest )
+            @add_event = Event.new(itinerary_id: @add_itinerary.id, node_id: events.sample)
+
+            @add_event.save
+            # that_event_id = @add_event.node_id + 10
+            # @add_event = Event.new(itinerary_id: @add_itinerary.id, node_id: that_event_id)
+
 
           end
 
@@ -54,7 +61,7 @@ class TripsController < ApplicationController
 
       # puts @trip.inspect
 
-      redirect_to trips_path
+      redirect_to trip_path(@trip)
     else
       render :new
     end

@@ -28,7 +28,14 @@
 
   <div>
     <%= f.label :interest %>
-    <%= f.select :interest, options_for_select([["Select One", ""], "Theme Parks", "Sight & Landmarks", "Museums"]), :class => 'genForm_dropBox' %>
+
+    <%= f.label "Theme Parks" %>
+    <%= f.check_box :interest, {}, "Theme Parks" %>
+    <%= f.label "Sight & Landmarks" %>
+    <%= f.check_box :interest, {}, "Sight & Landmarks" %>
+    <%= f.label "Museums" %>
+    <%= f.check_box :interest, {}, "Museums" %>
+
   </div>
 
   <div>
