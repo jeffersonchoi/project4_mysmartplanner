@@ -20,9 +20,9 @@
 
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
-              <li class="active"><a href="/">Home</a></li>
-              <li><a href="/nodes">Attractions</a></li>
-              <li><a href="/trips/new">Create a trip</a></li>
+              <li><%= link_to "Home", root_path%></li>
+              <li><%= link_to "Attraction", nodes_path%></li>
+              <li><%= link_to "New Trip", new_trip_path%></li>
               <li><a href="#">Page B</a></li>
 
             </ul>
@@ -33,14 +33,14 @@
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Account Settings <b class="caret"></b></a>
                   <ul class="dropdown-menu">
-                    <li><a href="#"><%= link_to "Edit My Account", edit_user_path(current_user)%></a></li>
-                    <li><a href="#"><%= link_to "View My Trips ", trips_path%></a></li>
-                    <li><a href="#">Page C - 3</a></li>
+                    <li><%= link_to "Edit My Account", edit_user_path(current_user)%></li>
+                    <li><%= link_to "View My Trips ", trips_path%></li>
+                    <li>Page C - 3</li>
                   </ul>
               </li>
               <li><%= link_to ' Log Out', logout_path, method: :delete, class:"glyphicon glyphicon-log-in" %></li>
             <% else %>
-              <li><a href="/users/new"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+              <li><%= link_to "Sign Up", new_user_path, class:"glyphicon glyphicon-user" %></li>
               <li><a href="#" data-toggle="modal" data-target="#loginModal"><span class="glyphicon glyphicon-log-in "></span> Login</a></li>
             <% end %>
             </ul>
