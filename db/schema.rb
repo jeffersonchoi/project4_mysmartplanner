@@ -29,13 +29,13 @@ ActiveRecord::Schema.define(version: 20150708023712) do
   add_index "events", ["node_id"], name: "index_events_on_node_id", using: :btree
 
   create_table "interests", force: :cascade do |t|
-    t.string   "theme_park"
-    t.string   "museum"
-    t.string   "beach"
-    t.string   "shopping"
-    t.string   "sight_landmark"
-    t.string   "arean_stadium"
-    t.string   "school"
+    t.boolean  "theme_park"
+    t.boolean  "museum"
+    t.boolean  "beach"
+    t.boolean  "shopping"
+    t.boolean  "sight_landmark"
+    t.boolean  "arean_stadium"
+    t.boolean  "school"
     t.integer  "trip_id"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false

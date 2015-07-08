@@ -1,13 +1,13 @@
 class CreateInterests < ActiveRecord::Migration
   def change
     create_table :interests do |t|
-      t.string :theme_park
-      t.string :museum
-      t.string :beach
-      t.string :shopping
-      t.string :sight_landmark
-      t.string :arean_stadium
-      t.string :school
+      t.boolean :theme_park
+      t.boolean :museum
+      t.boolean :beach
+      t.boolean :shopping
+      t.boolean :sight_landmark
+      t.boolean :arean_stadium
+      t.boolean :school
       t.belongs_to :trip, index: true, foreign_key: true
 
       t.timestamps null: false

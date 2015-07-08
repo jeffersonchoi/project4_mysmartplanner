@@ -24,11 +24,15 @@ class TripsController < ApplicationController
       @interest.trip_id = @trip.id
       @interest.save
 
-      event_ids = Node.where(subfeature: @trip.interest)
 
-      events = []
-      event_ids.each do |e|
-        events.push(e.id)
+      if @interest.theme_park.nil == false
+
+        event_ids = Node.where(subfeature: "theme_park")
+
+        events = []
+        event_ids.each do |e|
+          events.push(e.id)
+        end
       end
 
       # if @trip.hours_per_day % 3 == 0
