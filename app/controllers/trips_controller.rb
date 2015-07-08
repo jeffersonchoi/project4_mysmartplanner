@@ -25,7 +25,7 @@ class TripsController < ApplicationController
       @interest.save
 
 
-      if @interest.theme_park.nil == false
+      if @interest.theme_park == true
 
         event_ids = Node.where(subfeature: "theme_park")
 
@@ -33,25 +33,26 @@ class TripsController < ApplicationController
         event_ids.each do |e|
           events.push(e.id)
         end
-      end
+
 
       # if @trip.hours_per_day % 3 == 0
-        no_of_itinerary = (@trip.hours_per_day / 3).floor
-        for i in 1..no_of_itinerary
-          @add_itinerary = Itinerary.new(trip_id: @trip.id)
-          @add_itinerary.save
+          no_of_itinerary = (@trip.hours_per_day / 3).floor
+          for i in 1..no_of_itinerary
+            @add_itinerary = Itinerary.new(trip_id: @trip.id)
+            @add_itinerary.save
 
-          if @add_itinerary.save
+            if @add_itinerary.save
 
-            @add_event = Event.new(itinerary_id: @add_itinerary.id, node_id: events.sample)
+              @add_event = Event.new(itinerary_id: @add_itinerary.id, node_id: events.sample)
 
-            @add_event.save
-            # that_event_id = @add_event.node_id + 10
-            # @add_event = Event.new(itinerary_id: @add_itinerary.id, node_id: that_event_id)
+              @add_event.save
+              # that_event_id = @add_event.node_id + 10
+              # @add_event = Event.new(itinerary_id: @add_itinerary.id, node_id: that_event_id)
 
 
-          end
+              end
 
+            end
         end
 
       # elsif @trip.hours_per_day % 3 == 1
