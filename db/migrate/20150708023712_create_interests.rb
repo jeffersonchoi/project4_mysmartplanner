@@ -7,6 +7,7 @@ class CreateInterests < ActiveRecord::Migration
       t.string :shopping
       t.string :sight_landmark
       t.string :arean_stadium
+      t.string :school
       t.belongs_to :trip, index: true, foreign_key: true
 
       t.timestamps null: false
