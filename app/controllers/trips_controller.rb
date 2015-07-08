@@ -19,6 +19,11 @@ class TripsController < ApplicationController
     @trip.user_id = current_user.id
 
     if @trip.save
+
+      @interest = Interest.new(interest_params)
+      @interest.trip_id = @trip.id
+      @interest.save
+
       event_ids = Node.where(subfeature: @trip.interest)
 
       events = []
@@ -71,7 +76,11 @@ class TripsController < ApplicationController
 private
 
    def trip_params
-     params.require(:trip).permit(:destination, :start_date, :end_date, :budget, :hours_per_day, :interest)
+     params.require(:trip).permit(:destination, :start_date, :end_date, :budget, :hours_per_day)
+   end
+
+   def interest_params
+     params.require(:interest).permit(:theme_park, :museum, :beach, :shopping, :sight_landmark, :arean_stadium)
    end
 
 
