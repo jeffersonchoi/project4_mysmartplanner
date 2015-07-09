@@ -43,32 +43,40 @@ class TripsController < ApplicationController
       end
 
 
-          start_time = Event.calculate_start_time(@trip.hours_per_day)
-            # if @trip.hours_per_day % 3 == 0
-          no_of_itinerary = (@trip.hours_per_day / 3).floor
-          for i in 1..no_of_itinerary
-            @add_itinerary = Itinerary.new(trip_id: @trip.id)
-            @add_itinerary.save
+          number_of_days = (@trip.end_date - @trip.start_date + 1).to_i
 
-            if @add_itinerary.save
+          start_time = Event.calculate_start_time(@trip.start_date, @trip.hours_per_day)
+          
+          for x in 1..number_of_days
 
 
-              end_time = start_time + 3.hours
+                # if @trip.hours_per_day % 3 == 0
+              no_of_itinerary = (@trip.hours_per_day / 3).floor
+              for i in 1..no_of_itinerary
+                @add_itinerary = Itinerary.new(trip_id: @trip.id)
+                @add_itinerary.save
 
-              @add_event = Event.new(itinerary_id: @add_itinerary.id, node_id: events.sample, start_time: start_time, end_time: end_time)
-              events.delete_if{|b| b == @add_event.node_id}
-              @add_event.save
+                if @add_itinerary.save
 
-              start_time = end_time
 
-              # that_event_id = @add_event.node_id + 10
-              # @add_event = Event.new(itinerary_id: @add_itinerary.id, node_id: that_event_id)
-            end
+
+                  end_time = start_time + 3.hours
+
+                  @add_event = Event.new(itinerary_id: @add_itinerary.id, node_id: events.sample, start_time: start_time, end_time: end_time)
+                  events.delete_if{|b| b == @add_event.node_id}
+                  @add_event.save
+
+                  start_time = end_time
+
+                  # that_event_id = @add_event.node_id + 10
+                  # @add_event = Event.new(itinerary_id: @add_itinerary.id, node_id: that_event_id)
+                end
+              end
+
+              start_time = start_time + (24 - @trip.hours_per_day).hours
+
+
           end
-
-
-
-
 
 
 

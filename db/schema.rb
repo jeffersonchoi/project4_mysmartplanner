@@ -19,8 +19,8 @@ ActiveRecord::Schema.define(version: 20150708023712) do
   create_table "events", force: :cascade do |t|
     t.integer  "itinerary_id"
     t.integer  "node_id"
-    t.time     "start_time"
-    t.time     "end_time"
+    t.datetime "start_time"
+    t.datetime "end_time"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
   end
