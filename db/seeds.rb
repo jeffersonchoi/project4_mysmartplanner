@@ -1,8 +1,8 @@
-User.create ([
-  {first_name: "Jefferson", last_name: "Choi", email: "jeffersonchoi@gmail.com", password: "123", password_confirmation: "123", dob: "1991-9-12", gender: "male"},
-  {first_name: "User 2"},
-  {first_name: "User 3"}
-  ])
+# User.create ([
+#   {first_name: "Jefferson", last_name: "Choi", email: "jeffersonchoi@gmail.com", password: "123", password_confirmation: "123", dob: "1991-9-12", gender: "male"},
+#   {first_name: "User 2"},
+#   {first_name: "User 3"}
+#   ])
 
 Node.create([
   {node_name: "Universal Studios Hollywood", lat: 34.1381168, long: -118.3533783, address: "100 Universal City Plaza, Los Angeles, CA 91608", feature: "Attraction", subfeature: "theme_park"},
@@ -28,26 +28,26 @@ Node.create([
   {node_name: "Rose Bowl Stadium", lat: 34.1613284, long: -118.1676462, address: "1001 Rose Bowl Dr, Pasadena, CA 91103", feature: "Attraction", subfeature: "arean_stadium"}
   ])
 
-
-User.all.sample(1).each do |user|
-  Trip.create([
-    {destination: "Trip 1", user_id: user.id},
-    {destination: "Trip 2", user_id: user.id},
-    {destination: "Trip 3", user_id: user.id}
-    ])
-end
-
-Trip.all.sample(4).each do |trip|
-    Itinerary.create([
-      {trip_id: trip.id},
-      {trip_id: trip.id},
-      {trip_id: trip.id}
-      ])
-end
-Node.all.each do |node|
-  Itinerary.all.each do |itinerary|
-    Event.create([
-      {node_id: node.id, itinerary_id: itinerary.id}
-      ])
-  end
-end
+#
+# User.all.sample(1).each do |user|
+#   Trip.create([
+#     {destination: "Trip 1", user_id: user.id},
+#     {destination: "Trip 2", user_id: user.id},
+#     {destination: "Trip 3", user_id: user.id}
+#     ])
+# end
+#
+# Trip.all.sample(4).each do |trip|
+#     Itinerary.create([
+#       {trip_id: trip.id},
+#       {trip_id: trip.id},
+#       {trip_id: trip.id}
+#       ])
+# end
+# Node.all.each do |node|
+#   Itinerary.all.each do |itinerary|
+#     Event.create([
+#       {node_id: node.id, itinerary_id: itinerary.id}
+#       ])
+#   end
+# end
