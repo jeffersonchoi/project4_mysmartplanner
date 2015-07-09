@@ -13,10 +13,13 @@
 <p> Destination: 	 <%= @trip.destination %> </p>
 			<br>
 <p>	Travel dates: 	 <%= @trip.start_date %>      ---      <%= @trip.end_date %>  </p>
-			<br>
-     <%= @trip.budget %>
+
+  Travel budget:    <%= @trip.budget %> USD
 
 <p>
+
+	<br>
+	<p> Travel Direction </p>
 <% @itinerary.each do |itinerary| %>
 
 
