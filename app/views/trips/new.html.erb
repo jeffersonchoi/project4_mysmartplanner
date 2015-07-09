@@ -26,14 +26,39 @@
     <%= f.number_field :hours_per_day, :class => 'text_field', :step => 'any' %>
   </div>
 
+  <%= fields_for @interest do |u| %>
   <div>
-    <%= f.label :interest %>
-    <%= f.select :interest, options_for_select([["Select One", ""], "Theme Parks", "Sight & Landmarks", "Museums"]), :class => 'genForm_dropBox' %>
+      <%= u.label :theme_park %>
+      <%= u.check_box :theme_park, {}, "true" %>
+
+      <%= u.label :museum %>
+      <%= u.check_box :museum, {}, "true" %>
+
+      <%= u.label :beach %>
+      <%= u.check_box :beach, {}, "true" %>
+
+      <%= u.label :shopping %>
+      <%= u.check_box :shopping, {}, "true" %>
+
+      <%= u.label :sight_landmark %>
+      <%= u.check_box :sight_landmark, {}, "true" %>
+
+      <%= u.label :arean_stadium %>
+      <%= u.check_box :arean_stadium, {}, "true" %>
+
+      <%= u.label :school %>
+      <%= u.check_box :school, {}, "true" %>
   </div>
+
+
+
+   <% end %>
+
+
+
 
   <div>
     <%= f.submit class: "btn btn-primary" %>
   </div>
-
 
   <% end %>
