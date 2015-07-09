@@ -1,20 +1,51 @@
-<h1> <%= @trip.destination %>'s details</h1>
+<h1> <%= @user %> 's travel itineraries to  <%= @trip.destination %></h1>
 
-<table>
+<!-- <table>
 	<tr>
 		<th> First Name </th>
 		<th> Last Name </th>
     <th> Email </th>
     <th> Date of Birth </th>
 
-	</tr>
+	</tr> -->
+<!--
+		<tr> -->
+<p> Destination: 	 <%= @trip.destination %> </p>
+			<br>
+<p>	Travel dates: 	 <%= @trip.start_date %>      ---      <%= @trip.end_date %>  </p>
+			<br>
+     <%= @trip.budget %>
 
-		<tr>
-			<td> <%= @trip.destination %> </td>
-			<td> <%= @trip.start_date %> </td>
-      <td> <%= @trip.end_date %> </td>
-      <td> <%= @trip.budget %> </td>
+<p>
+<% @itinerary.each do |itinerary| %>
 
-		</tr>
-</table>
+
+		<% itinerary.events.each do |event| %>
+		<p>
+		<%= event.start_time.strftime("%F") %>
+
+
+			<%= event.start_time.strftime("%I:%M%p") %> --- <%= event.end_time.strftime("%I:%M%p") %>
+			<%= event.node.node_name %>
+		</p>
+
+<!--
+ 			<%= event.node.inspect %>
+
+				<%= event.node.methods %>
+ -->
+
+
+
+
+
+
+
+		<% end %>
+
+<% end %>
+</p>
+
+		<!-- </tr> -->
+<!-- </table> -->
 <%= link_to "Back to Trips' Lists", trips_path %>
