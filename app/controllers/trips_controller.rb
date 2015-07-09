@@ -27,7 +27,7 @@ class TripsController < ApplicationController
 
 
       events = []
-      variables = ["theme_park", "museum", "beach", "shopping", "sight_landmark", "arean_stadium"]
+      variables = ["theme_park", "museum", "beach", "shopping", "sight_landmark", "arean_stadium", "school"]
       variables.each do |variable|
 
         if @interest[variable] == true
@@ -113,7 +113,7 @@ private
    end
 
    def interest_params
-     params.require(:interest).permit(:theme_park, :museum, :beach, :shopping, :sight_landmark, :arean_stadium)
+     params.require(:interest).permit(:theme_park, :museum, :beach, :shopping, :sight_landmark, :arean_stadium, :school)
    end
 
 
