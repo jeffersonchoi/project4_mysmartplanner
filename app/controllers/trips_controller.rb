@@ -29,26 +29,20 @@ class TripsController < ApplicationController
       events = []
       variables = ["theme_park", "museum", "beach", "shopping", "sight_landmark", "arean_stadium"]
       variables.each do |variable|
-        puts "..................................."
-        puts @interest.inspect
+
         if @interest[variable] == true
 
 
           whatever = Node.where(subfeature: variable)
-            puts '`````````````````````````````````````'
-            puts whatever
+
           whatever.each do |place|
 
             events.push(place.id)
-            puts "=============================================="
-            puts place
-            puts "..."
-            puts events
-            puts "=============================================="
+
 
           end
         else
-          puts "-------------------------------------------------------------"
+
 
         end
       end
@@ -74,10 +68,7 @@ class TripsController < ApplicationController
                   end_time = start_time + 3.hours
 
                   @add_event = Event.new(itinerary_id: @add_itinerary.id, node_id: events.sample, start_time: start_time, end_time: end_time)
-                  # puts "=============================================="
-                  # puts events
-                  # puts @add_event.node_id
-                  # puts "=============================================="
+
                   events.delete_if{|b| b == @add_event.node_id}
                   @add_event.save
 
