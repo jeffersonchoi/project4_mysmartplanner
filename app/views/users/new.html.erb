@@ -53,6 +53,10 @@
   </div>
 </div> -->
 
+
+
+
+        <%= form_for @user do |f| %>
 <div class="container">
 
 <div class="row">
@@ -61,7 +65,7 @@
 			<h2>Please Sign Up <small>It's free and always will be.</small></h2>
 			<hr class="colorgraph">
 			<div class="row">
-        <%= form_for @user do |f| %>
+
 				<div class="col-xs-12 col-sm-6 col-md-6">
 					<div class="form-group">
             <%= f.label :first_name %>
@@ -140,7 +144,7 @@
           <%= link_to "Sign In", login_path, class:"btn btn-success btn-block btn-lg" %>
         </div>
 			</div>
-      <% end %>
+
 		</form>
 	</div>
 </div>
@@ -170,3 +174,4 @@
 </div><!-- /.modal -->
 
 </div>
+      <% end %>
