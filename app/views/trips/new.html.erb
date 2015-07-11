@@ -1,4 +1,4 @@
-
+<!--
 
   <h1> Pre Trip Survey </h1>
 
@@ -61,4 +61,106 @@
     <%= f.submit class: "btn btn-primary" %>
   </div>
 
-  <% end %>
+  <% end %> -->
+
+
+
+  <%= form_for @trip do |f| %>
+
+  <div class="container auth">
+      <h1 class="text-center">Pre-trip Survey <small>Let us do the work!</samll> </h1>
+      <div id="big-form" class="well auth-box">
+        <form>
+          <fieldset>
+
+            <!-- Form Name -->
+            <legend>Nice form example</legend>
+
+            <!-- <div class="btn-group">
+              <a href="index.html" class="btn btn-default">All</a>
+              <a href="example1.html" class="btn btn-default">example 1</a>
+              <a href="example2.html" class="btn btn-default">example 2</a>
+            </div> -->
+
+
+            <!-- Text input-->
+            <div class="form-group">
+              <%= f.label :destination, class:" control-label" %>
+              <!-- <label class=" control-label" for="textinput">Username</label> -->
+              <div class="">
+                <!-- <input id="textinput" name="textinput" placeholder="Username" class="form-control input-md" type="text"> -->
+                <%= f.select :destination, CS.cities(:ca, :us)  %>
+                <!-- <span class="help-block">help</span> -->
+              </div>
+            </div>
+
+            <!-- Password input-->
+            <div class="form-group">
+              <%= f.label :start_date, :class => "control-label"%>
+
+              <div class="">
+                <%= f.date_select :start_date, :start_year => Date.today.year, :prompt => { :day => 'Select day', :month => 'Select month', :year => 'Select year' }  %>
+
+                <span> ----------- </span>
+
+                <%= f.label :end_date, :class => "control-label"%>
+                <%= f.date_select :end_date, :start_year => Date.today.year,:prompt => { :day => 'Select day', :month => 'Select month', :year => 'Select year' }  %>
+              </div>
+
+            </div>
+
+            <div class="form-group">
+              <%= f.label :budget_in_usd %>
+              <div class= "">
+                <%= f.number_field :budget, :class => 'text_field', :step => 'any' %>
+              </div>
+
+            </div>
+
+            <div class="form-group">
+              <%= f.label :average_hours_per_day %>
+              <div class= "">
+                <%= f.number_field :hours_per_day, :class => 'text_field', :step => 'any' %>
+              </div>
+            </div>
+
+
+
+
+            <%= fields_for @interest do |u| %>
+            <%= u.label :choose_from_the_following_which_interest_you %>
+            <div class="form-group">
+              <div class="">
+                <%= u.label :theme_park %>
+                <%= u.check_box :theme_park, {}, "true" %>
+
+                <%= u.label :museum %>
+                <%= u.check_box :museum, {}, "true" %>
+
+                <%= u.label :beach %>
+                <%= u.check_box :beach, {}, "true" %>
+
+                <%= u.label :shopping %>
+                <%= u.check_box :shopping, {}, "true" %>
+
+                <%= u.label :sight_landmark %>
+                <%= u.check_box :sight_landmark, {}, "true" %>
+
+                <%= u.label :arean_stadium %>
+                <%= u.check_box :arean_stadium, {}, "true" %>
+
+                <%= u.label :school %>
+                <%= u.check_box :school, {}, "true" %>
+              </div>
+            </div>
+
+            <div>
+              <%= f.submit class: "btn btn-primary" %>
+            </div>
+
+
+             <% end %>
+
+      
+
+<% end %>
