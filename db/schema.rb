@@ -58,6 +58,7 @@ ActiveRecord::Schema.define(version: 20150708023712) do
     t.string   "address"
     t.string   "feature"
     t.string   "subfeature"
+    t.string   "picture"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

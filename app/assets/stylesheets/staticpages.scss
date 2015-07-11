@@ -1,3 +1,21 @@
 // Place all the styles related to the staticpages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.full {
+  width: 100vw;
+  height: 100vh;
+  background: url("http://i.imgur.com/h2lsvW2.jpg") no-repeat center fixed;
+  background-size: cover;
+
+}
+
+#smart-planner {
+  color: black;
+  font-family: "Times New Roman", Times, sans-serif;
+
+}
+
+.vertical-center {
+ text-align: center;
+ padding-top: 200px !important;
+}

@@ -7,6 +7,7 @@ class CreateNodes < ActiveRecord::Migration
       t.string :address
       t.string :feature
       t.string :subfeature
+      t.string :picture
 
       t.timestamps null: false
     end
