@@ -1,56 +1,6 @@
-<!-- <h1> <%= @user %> 's travel itineraries to  <%= @trip.destination %></h1>
-
-<!-- <table>
-	<tr>
-		<th> First Name </th>
-		<th> Last Name </th>
-    <th> Email </th>
-    <th> Date of Birth </th>
-
-	</tr> -->
-<!--
-		<tr> -->
-<p> Destination: 	 <%= @trip.destination %> </p>
-			<br>
-<p>	Travel dates: 	 <%= @trip.start_date %>      ---      <%= @trip.end_date %>  </p>
-
-  Travel budget:    <%= @trip.budget %> USD
-
-<p>
-
-	<br>
-	<p> Travel Direction </p>
-<% @itinerary.each do |itinerary| %>
-
-
-		<% itinerary.events.each do |event| %>
-		<p>
-		<%= event.start_time.strftime("%F") %>
-
-
-			<%= event.start_time.strftime("%I:%M%p") %> --- <%= event.end_time.strftime("%I:%M%p") %>
-			<%= event.node.node_name %>
-		</p>
-
-
-
-
-		<% end %>
-
-<% end %>
-</p>
-
-		<!-- </tr> -->
-<!-- </table> -->
-<%= link_to "Back to Trips' Lists", trips_path %> -->
-
-
-
-
-
 
 <div class="container">
-
+<p>.</p>
 <h2>Agenda</h2>
     <p class="lead">
         This agenda viewer will let you see multiple events cleanly!
@@ -73,63 +23,32 @@
                         <th>Event</th>
                     </tr>
                 </thead>
+
+								<% @itinerary.each do |itinerary| %>
+									<% itinerary.events.each do |event| %>
                 <tbody>
                     <!-- Single event in a single day -->
                     <tr>
                         <td class="agenda-date" class="active" rowspan="1">
-                            <div class="dayofmonth">26</div>
-                            <div class="dayofweek">Saturday</div>
-                            <div class="shortdate text-muted">July, 2014</div>
+                            <div class="dayofmonth"><%= event.start_time.strftime("%d") %></div>
+                            <div class="dayofweek"><%= event.start_time.strftime("%A") %></div>
+                            <div class="shortdate text-muted"><%= event.start_time.strftime("%b, %Y") %></div>
                         </td>
                         <td class="agenda-time">
-                            5:30 AM
+                            <%= event.start_time.strftime("%I:%M%p") %> --- <%= event.end_time.strftime("%I:%M%p") %>
                         </td>
                         <td class="agenda-events">
                             <div class="agenda-event">
-                                <i class="glyphicon glyphicon-repeat text-muted" title="Repeating event"></i> 
-                                Fishing
+                                <%= event.node.node_name %>
                             </div>
                         </td>
                     </tr>
+										<% end %>
+									<% end %>
 
-                    <!-- Multiple events in a single day (note the rowspan) -->
-                    <tr>
-                        <td class="agenda-date" class="active" rowspan="3">
-                            <div class="dayofmonth">24</div>
-                            <div class="dayofweek">Thursday</div>
-                            <div class="shortdate text-muted">July, 2014</div>
-                        </td>
-                        <td class="agenda-time">
-                            8:00 - 9:00 AM
-                        </td>
-                        <td class="agenda-events">
-                            <div class="agenda-event">
-                                Doctor's Appointment
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="agenda-time">
-                            10:15 AM - 12:00 PM
-                        </td>
-                        <td class="agenda-events">
-                            <div class="agenda-event">
-                                Meeting with executives
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="agenda-time">
-                            7:00 - 9:00 PM
-                        </td>
-                        <td class="agenda-events">
-                            <div class="agenda-event">
-                                Aria's dance recital
-                            </div>
-                        </td>
-                    </tr>
                 </tbody>
             </table>
         </div>
     </div>
 </div>
+<%= link_to "Back to Trips' Lists", trips_path %> -->

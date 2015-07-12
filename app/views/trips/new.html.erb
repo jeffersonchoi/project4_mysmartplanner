@@ -64,17 +64,17 @@
   <% end %> -->
 
 
-<div class="user-background">
+<div class="trip-background">
   <%= form_for @trip do |f| %>
 
   <div class="container auth">
-      <h1 class="text-center">Pre-trip Survey <small>Let us do the work!</samll> </h1>
+      <h1 class="text-center"> Pre-trip Survey</h1>
       <div id="big-form" class="well auth-box">
         <form>
           <fieldset>
 
             <!-- Form Name -->
-            <legend>Nice form example</legend>
+            <legend> <small>Let us do the work!</samll></legend>
 
             <!-- <div class="btn-group">
               <a href="index.html" class="btn btn-default">All</a>
@@ -131,24 +131,25 @@
             <%= u.label :choose_from_the_following_which_interest_you %>
             <div class="form-group">
               <div class="">
+                <span>1. </span>
                 <%= u.label :theme_park %>
                 <%= u.check_box :theme_park, {}, "true" %>
-
+                <span>2. </span>
                 <%= u.label :museum %>
                 <%= u.check_box :museum, {}, "true" %>
-
+                <span>3. </span>
                 <%= u.label :beach %>
                 <%= u.check_box :beach, {}, "true" %>
-
+                <span>4. </span>
                 <%= u.label :shopping %>
                 <%= u.check_box :shopping, {}, "true" %>
-
+                <span>5. </span>
                 <%= u.label :sight_landmark %>
                 <%= u.check_box :sight_landmark, {}, "true" %>
-
+                <span>6. </span>
                 <%= u.label :arean_stadium %>
                 <%= u.check_box :arean_stadium, {}, "true" %>
-
+                <span>7. </span>
                 <%= u.label :school %>
                 <%= u.check_box :school, {}, "true" %>
               </div>
