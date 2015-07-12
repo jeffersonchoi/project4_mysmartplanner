@@ -1,4 +1,4 @@
-<h1>Nodes</h1>
+<!-- <h1>Nodes</h1>
 
 
 <table>
@@ -13,4 +13,54 @@
     <td><img src="<%= node.picture %>" ></td>
   </tr>
   <% end %>
-</table>
+</table> -->
+ <% @nodes.each do |node| %>
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-8 col-xs-offset-2">
+            <h4></h4>
+        </div>
+    </div>
+    <hr>
+    <!-- Begin of rows -->
+    <div class="row carousel-row">
+        <div class="col-xs-8 col-xs-offset-2 slide-row">
+            <div id="carousel-1" class="carousel slide slide-carousel" data-ride="carousel">
+              <!-- Indicators -->
+              <ol class="carousel-indicators">
+                <li data-target="#carousel-1" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-1" data-slide-to="1"></li>
+                <li data-target="#carousel-1" data-slide-to="2"></li>
+              </ol>
+
+              <!-- Wrapper for slides -->
+              <div class="carousel-inner">
+                <div class="item active">
+                  <img src="<%= node.picture %>" >
+                </div>
+                <!-- <div class="item">
+                    <img src="http://lorempixel.com/150/150?rand=2" alt="Image">
+                </div>
+                <div class="item">
+                    <img src="http://lorempixel.com/150/150?rand=3" alt="Image">
+                </div> -->
+              </div>
+            </div>
+            <div class="slide-content">
+                <h4><%= node.node_name %></h4>
+                <p>   <%= node.address %> </p>
+            </div>
+            <div class="slide-footer">
+                <span class="pull-right buttons">
+                    <button class="btn btn-sm btn-default"><i class="fa fa-fw fa-eye"></i> Show</button>
+                </span>
+            </div>
+        </div>
+    </div>
+
+
+    </div>
+</div>
+
+<% end %>
