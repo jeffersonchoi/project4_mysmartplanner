@@ -1,13 +1,10 @@
+<div class="show-background">
 
 <div class="container">
 <p>.</p>
-<h2>Agenda</h2>
-    <p class="lead">
-        This agenda viewer will let you see multiple events cleanly!
-    </p>
 
     <div class="alert alert-warning">
-        <h4>Mobile Support</h4>
+        <h4><%= @user %>'s trip to <%= @trip.destination %></h4>
         <p>In order to get the lines between cells looking their best without any JavaScript, I had to use tables for this design. While this could be done in ".row", doing so will cause issues when displaying the vertical borders between cells, which is a compromise I wasn't willing to make this time.'</p>
     </div>
 
@@ -21,6 +18,7 @@
                         <th>Date</th>
                         <th>Time</th>
                         <th>Event</th>
+												<th>Address</th>
                     </tr>
                 </thead>
 
@@ -42,6 +40,11 @@
                                 <%= event.node.node_name %>
                             </div>
                         </td>
+												<td class="agenda-address">
+                            <div class="agenda-event">
+                                <%= event.node.address %>
+                            </div>
+                        </td>
                     </tr>
 										<% end %>
 									<% end %>
@@ -51,4 +54,4 @@
         </div>
     </div>
 </div>
-<%= link_to "Back to Trips' Lists", trips_path %> -->
+</div>
