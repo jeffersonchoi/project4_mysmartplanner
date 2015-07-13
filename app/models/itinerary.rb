@@ -3,5 +3,5 @@ class Itinerary < ActiveRecord::Base
   has_many :events
   has_many :nodes, through: :events
 
-  # validates :trip_id, presence: true
+  validates :trip_id, presence: true
 end

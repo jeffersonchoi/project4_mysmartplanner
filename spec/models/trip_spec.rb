@@ -17,10 +17,6 @@ RSpec.describe Trip, type: :model do
       trip = Trip.new(destination: "Los Angeles", start_date: "2015-9-12", end_date: "2015-9-12", budget: 123, hours_per_day: nil)
       expect(trip).to be_invalid
     end
-    it "is invalid without an interest" do
-      trip = Trip.new(destination: "Los Angeles", start_date: "2015-9-12", end_date: "2015-9-12", budget: 123, hours_per_day: 6)
-      expect(trip).to be_invalid
-    end
     it "is invalid if start_date is before current date" do
       trip = Trip.new(destination: "Los Angeles", start_date: "2015-7-12", end_date: "2015-9-12", budget: 123, hours_per_day: 6)
       expect(trip).to be_invalid
