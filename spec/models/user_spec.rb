@@ -30,15 +30,21 @@ RSpec.describe User, type: :model do
       expect(user).to be_invalid
     end
     it "is invalid if password is not equal to password_confirmation" do
-      user1 = User.new(first_name: "Jefferson", last_name: "Choi", email: "jeffersonchoi@gmail.com", password: "123", password_confirmation: "321", dob: "1991-9-12", gender: nil)
+      user1 = User.new(first_name: "Jefferson", last_name: "Choi", email: "jeffersonchoi@gmail.com", password: "123", password_confirmation: "321", dob: "1991-9-12", gender: "male")
       user2 = User.new(first_name: "Jefferson", last_name: "Choi", email: "jeffersonchoi@gmail.com", password: "123", password_confirmation: "123", dob: "1991-9-12", gender: "male")
       expect(user1).to be_invalid
       expect(user2).to be_valid
     end
     it "is invalid if email is incorrect" do
-      user1 = User.new(first_name: "Jefferson", last_name: "Choi", email: "j.com", password: "123", password_confirmation: "123", dob: "1991-9-12", gender: nil)
-      user2 = User.new(first_name: "Jefferson", last_name: "Choi", email: "j@.com", password: "123", password_confirmation: "123", dob: "1991-9-12", gender: nil)
+      user1 = User.new(first_name: "Jefferson", last_name: "Choi", email: "j.com", password: "123", password_confirmation: "123", dob: "1991-9-12", gender: "male")
+      user2 = User.new(first_name: "Jefferson", last_name: "Choi", email: "j@.com", password: "123", password_confirmation: "123", dob: "1991-9-12", gender: "male")
       expect(user1).to be_invalid
+      expect(user2).to be_invalid
+    end
+    it "is invalid if email is repeated" do
+      user1 = User.create(first_name: "Jefferson", last_name: "Choi", email: "jeffersonchoi@gmail.com", password: "123", password_confirmation: "123", dob: "1991-9-12", gender: "male")
+      user2 = User.new(first_name: "Jefferson", last_name: "Choi", email: "jeffersonchoi@gmail.com", password: "123", password_confirmation: "123", dob: "1991-9-12", gender: "male")
+      expect(user1).to be_valid
       expect(user2).to be_invalid
     end
 
