@@ -29,5 +29,18 @@ RSpec.describe Trip, type: :model do
       trip = Trip.new(destination: "Los Angeles", start_date: "2015-9-12", end_date: "2015-9-10", budget: 123, hours_per_day: 6, interest: "theme_park")
       expect(trip).to be_invalid
     end
+    it "is invalid if hours_per_day is less than 3 or larger than 21" do
+      trip1 = Trip.new(destination: "Los Angeles", start_date: "2015-9-12", end_date: "2015-9-13", budget: 123, hours_per_day: 3, interest: "theme_park")
+      trip2 = Trip.new(destination: "Los Angeles", start_date: "2015-9-12", end_date: "2015-9-13", budget: 123, hours_per_day: 21, interest: "theme_park")
+      expect(trip1).to be_invalid
+      expect(trip2).to be_invalid
+    end
+    it "is invalid if hours_per_day is not an integer" do
+      trip1 = Trip.new(destination: "Los Angeles", start_date: "2015-9-12", end_date: "2015-9-13", budget: 123, hours_per_day: "hi", interest: "theme_park")
+      trip2 = Trip.new(destination: "Los Angeles", start_date: "2015-9-12", end_date: "2015-9-13", budget: 123, hours_per_day: 21.50, interest: "theme_park")
+      expect(trip1).to be_invalid
+      expect(trip2).to be_invalid
+    end
+
 
 end

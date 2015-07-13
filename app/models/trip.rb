@@ -7,7 +7,7 @@ class Trip < ActiveRecord::Base
   validates :destination, :start_date, :end_date, :hours_per_day, :interest,  presence: true
   validate :end_date_is_after_start_date
   validate :start_date_cannot_be_in_the_past
-
+  validates_inclusion_of :hours_per_day, in: 6..12, message: "Please select a value between 6 to 12"
 
 
 private
