@@ -3,7 +3,7 @@ class Event < ActiveRecord::Base
   belongs_to :node
 
 
-  validates :start_time, :end_time, :itinerary_id, :node_id, presence: true
+
 
   def self.calculate_start_time(start_date, hours_per_day)
 
