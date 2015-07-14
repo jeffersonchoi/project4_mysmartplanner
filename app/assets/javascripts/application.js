@@ -41,23 +41,21 @@ function initialize() {
     for (i = 0; i < results.length; i+=1){
         var markerPosition = new google.maps.LatLng(results[i]["lat"], results[i]["long"])
         var marker=new google.maps.Marker({
-        position:markerPosition,
-        animation:google.maps.Animation.BOUNCE //animates the marker
-
+            position:markerPosition,
+            animation:google.maps.Animation.BOUNCE //animates the marker
         });
-    bounds.extend(markerPosition);
-    map.fitBounds(bounds);
-    markers.push(marker);
-    var content = results[i]["node_name"];
+        bounds.extend(markerPosition);
+        map.fitBounds(bounds);
+        markers.push(marker);
 
-
-    
-    google.maps.event.addListener(markers[i], 'click', function() {
-                infowindow.setContent(i.to_s);
-                infowindow.open(map, this);
-              });
-
-    marker.setMap(map);
-    }
+        google.maps.event.addListener(marker, 'mouseover', function(marker, i) {
+            return function () {
+              var content = results[i].node_name;
+              infowindow.setContent(content);
+              infowindow.open(map, marker);
+                  };
+                }(marker,i));
+        marker.setMap(map);
+      }
   })
 };
