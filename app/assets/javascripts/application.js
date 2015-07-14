@@ -29,7 +29,7 @@ function initialize() {
 
     var mapProperties = {
     // center:new google.maps.LatLng(34.0129821,-118.495196),
-    zoom: 10,
+    zoom: 5,
     mapTypeId: google.maps.MapTypeId.ROADMAP
     }
 
