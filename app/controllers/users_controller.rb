@@ -16,11 +16,13 @@ class UsersController < ApplicationController
      @user = User.new(user_params)
      if @user.save
        session[:user_id] = @user.id.to_s
+       flash[:success] = "Account successfully created."
        redirect_to nodes_path
      else
        render :new
      end
    end
+
 
    def edit
     @user = User.find(current_user)
