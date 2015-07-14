@@ -6,9 +6,26 @@ class TripsController < ApplicationController
   end
 
   def show
+
+    @nodes = []
     @user = current_user.first_name
     @trip = Trip.find(params[:id])
     @itinerary = @trip.itineraries
+    @itinerary.each do |itinerary|
+      @events = itinerary.events
+        @events.each do |event|
+          @nodes <<  event.node
+        end
+    end
+
+    respond_to do |format|
+         format.html {
+           render
+         }
+         format.json {
+           render json: @nodes
+         }
+       end
   end
 
   def new
