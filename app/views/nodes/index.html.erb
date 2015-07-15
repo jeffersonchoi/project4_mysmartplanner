@@ -15,13 +15,14 @@
   <% end %>
 </table> -->
 
+<h2> Attractions </h2>
 
-<%= form_tag nodes_path, style: "padding-top: 60px; text-align:center;",:method => :get do %>
+<%= form_tag nodes_path, style: "text-align:center;",:method => :get do %>
   <p>
     <%= text_field_tag :search, params[:search] %>
-    <%= submit_tag "Search",class: "btn btn-default", :name => nil %>
+    <%= submit_tag "Search for attractions",class: "btn btn-default", :name => nil %>
     <% if params[:search].present? %>
-      <%= link_to "Back to List", nodes_path, class: "btn btn-default" %>
+      <%= link_to "Return to List", nodes_path, class: "btn btn-default" %>
       <% end %>
 <% end %>
 
@@ -83,7 +84,8 @@
             </div>
             <div class="slide-footer">
                 <span class="pull-right buttons">
-                    <button class="btn btn-sm btn-default"><i class="fa fa-fw fa-eye"></i> Show</button>
+                <i class="fa fa-fw fa-eye"></i> <%= link_to "related YELP search", node_path(node), class:"btn btn-sm btn-default"%>
+                    <!-- <button class="btn btn-sm btn-default">Show</button> -->
                 </span>
             </div>
         </div>
