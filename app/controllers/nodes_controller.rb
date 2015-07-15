@@ -14,6 +14,21 @@ class NodesController < ApplicationController
   end
 
   def show
+
+    @comment = []
+    @photo = []
+    @rating = []
     @node = Node.find(params[:id])
+    @activities = Yelp.client.search(@node.node_name)
+
+    @activities.businesses.each do |activity|
+      @comment <<  activity.snippet_text
+      @photo << activity.snippet_image_url
+      @rating << activity.rating_img_url
+    end
+
+
+
+
   end
 end

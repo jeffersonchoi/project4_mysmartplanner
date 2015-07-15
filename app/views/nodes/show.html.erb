@@ -1,6 +1,50 @@
 
-<tr>
-  <td><%= @node.node_name %></td>
-  <td><%= @node.address %></td>
-  <td><img class="test" src="<%= @node.picture %> " ></td>
-</tr>
+<h2> <%= @node.node_name %>'s related YELP Search <img id="yelplogo" src="https://s3-media3.fl.yelpcdn.com/assets/srv0/developer_pages/65526d1a519b/assets/img/Powered_By_Yelp_Red.png"></h2>
+
+<% @activities.businesses.each do |activity| %>
+
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css"/>
+<div class="container">
+  <div class="well">
+    <div class="media">
+      	<a class="pull-left" href="#">
+
+    	<img class="media-object" src="<%=activity.snippet_image_url%>">
+
+  		</a>
+  		<div class="media-body">
+    		<h4 class="media-heading"><%= activity.name %></h4>
+
+          <p class="text-right"><%= activity.location.address %></p>
+
+
+          <ul>
+          <li><%= activity.snippet_text %></li>
+          </ul>
+
+          <ul class="list-inline list-unstyled">
+            <span><i class="glyphicon glyphicon-comment"></i> 0 comments</span>
+            <li>|</li>
+            <li>
+                 <img class="media-object" src="<%=activity.rating_img_url%>">
+            </li>
+            <li>|</li>
+            <li>
+              <span><i class="fa fa-facebook-square"></i></span>
+              <span><i class="fa fa-twitter-square"></i></span>
+              <span><i class="fa fa-google-plus-square"></i></span>
+            </li>
+			</ul>
+       </div>
+    </div>
+  </div>
+</div>
+
+  <% end %>
+
+
+  <!-- <td><img class="test" src="<%= @node.picture %> " ></td> -->
+
+
+
+<%= @activities.inspect %>
