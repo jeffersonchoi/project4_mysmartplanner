@@ -7,11 +7,11 @@ Rails.application.routes.draw do
   resources :users
   resources :trips
   resources :nodes
-  resources :nodes, only: :index do
-    collection do
-      get :autocomplete
-    end
-  end
+  # resources :nodes, only: :index do
+  #   collection do
+  #     get :autocomplete
+  #   end
+  # end
   get '/login'     => 'sessions#new'
   post '/login'    => 'sessions#create'
   delete '/logout' => 'sessions#destroy'
