@@ -15,11 +15,33 @@
   <% end %>
 </table> -->
 
-<%= form_tag nodes_path, :method => :get do %>
+
+<%= form_tag nodes_path, style: "padding-top: 60px; text-align:center;",:method => :get do %>
   <p>
     <%= text_field_tag :search, params[:search] %>
-    <%= submit_tag "Search the places", :name => nil %>
+    <%= submit_tag "Search",class: "btn btn-default", :name => nil %>
+    <% if params[:search].present? %>
+      <%= link_to "Back to List", nodes_path, class: "btn btn-default" %>
+      <% end %>
 <% end %>
+
+
+
+<!-- <%= form_tag nodes_path, class: "form-inline", style: "padding-top: 60px; text-align:center;", method: :get do %> -->
+  <!-- <div class="input-group input-group-lg" > -->
+  <!-- <% if params[:search].present? %> -->
+
+    <!-- <%= text_field_tag :search, params[:search], class: "form-control", id: "node_search", autocomplete: "on" %> -->
+
+    <!-- <div class="input-group-btn"> -->
+      <!-- <%= link_to "clear", nodes_path, class: "btn btn-default" %> -->
+    <!-- </div> -->
+    <!-- <div class="input-group-btn"> -->
+      <!-- <%= submit_tag "Search", class: "btn btn-primary" %> -->
+    <!-- </div> -->
+  <!-- <% end %> -->
+  <!-- </div> -->
+<!-- <% end %> -->
 
 
  <% @nodes.each do |node| %>

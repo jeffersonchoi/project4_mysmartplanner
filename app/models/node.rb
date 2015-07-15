@@ -1,5 +1,5 @@
 class Node < ActiveRecord::Base
-  searchkick word_middle: [:node_name, :subfeature]  
+  searchkick autocomplete: [:node_name]  
 
   has_many :events
   has_many :itineraries, through: :events
