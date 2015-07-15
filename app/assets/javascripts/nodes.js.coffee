@@ -1,7 +1,7 @@
 # Place all the behaviors and hooks related to the matching controller here.
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
-$ ->
-  $('#node_search')
-    name: "node_name"
-    remote: "/nodes/autocomplete?query=%QUERY"
+# $ ->
+#   $('#node_search').typeahead
+#     name: "node_name"
+#     remote: "/nodes/autocomplete?query=%QUERY"
