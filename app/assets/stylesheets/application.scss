@@ -34,9 +34,17 @@ BODY.sessions-controller.new-action, BODY.sessions-controller.new-action, BODY.u
 }
 
 BODY.nodes-controller.index-action {
-  padding-top: 10px;
+  width: 100vw;
+  height: 100vh;
   background: url("http://i.imgur.com/8nMDDYm.jpg") no-repeat center fixed;
 }
+BODY.nodes-controller.show-action {
+  width: 100vw;
+  height: 100vh;
+  background: url("http://i.imgur.com/NMwsQfL.jpg") no-repeat center fixed;
+  background-size: cover;
+}
+
 
 .map-container {
 
