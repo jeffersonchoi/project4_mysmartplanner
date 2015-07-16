@@ -13,12 +13,16 @@ class UsersController < ApplicationController
    end
 
    def create
+
      @user = User.new(user_params)
      if @user.save
        session[:user_id] = @user.id.to_s
        flash[:success] = "Account successfully created."
+      #  puts "-----------------no error ---------------"
        redirect_to nodes_path
      else
+      #  puts "----------------------------------"
+      #  puts @user.errors.full_messages
        render :new
      end
    end

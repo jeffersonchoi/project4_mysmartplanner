@@ -58,7 +58,17 @@
 
 
 <%= form_for @user do |f| %>
+<% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
 
+      <ul>
+      <% @user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
 <div class="container">
 
 <div class="row">
@@ -98,7 +108,7 @@
         <div class="col-xs-12 col-sm-7 col-md-7">
 					<div class="form-group">
             <div>
-              <%= f.label :date_of_bith %>
+              <%= f.label :date_of_birth %>
               <%= f.date_select(:dob, :start_year => 1940, :end_year => 2010) %>
             </div>
           </div>
