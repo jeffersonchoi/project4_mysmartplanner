@@ -1,34 +1,39 @@
 class UsersController < ApplicationController
 
   def index
+    # return all the users
      @users = User.all
    end
 
    def show
+     # show the individual user
      @user = User.find(params[:id])
    end
 
    def new
+     # new user
      @user = User.new
    end
 
    def create
-
+     #create a new user
      @user = User.new(user_params)
      if @user.save
+       #create and store user id as session user_id
        session[:user_id] = @user.id.to_s
+       #do a flash message to tell others
        flash[:success] = "Account successfully created."
-      #  puts "-----------------no error ---------------"
+       #redirect to attraction lists
        redirect_to nodes_path
      else
-      #  puts "----------------------------------"
-      #  puts @user.errors.full_messages
+       #render the new form again
        render :new
      end
    end
 
 
    def edit
+    #find a specific user
     @user = User.find(current_user)
    end
 
@@ -36,7 +41,8 @@ class UsersController < ApplicationController
     @user = User.find(current_user)
 
     if @user.update_attributes(user_params)
-      redirect_to users_path
+      flash[:success] = "Account successfully updated."
+      redirect_to nodes_path
     else
       render :edit
     end
