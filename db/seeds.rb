@@ -25,7 +25,10 @@ Node.create([
   {node_name: "Citadel Outlets", lat: 34.0073436, long: -118.1528874, address: "100 Citadel Drive, Los Angeles, CA 90040", feature: "Attraction", subfeature: "shopping", picture: "http://d14dsi4x2zx6ql.cloudfront.net/files/styles/welcome_image/public/VCW_SI_OutletMalls_T3_Prayitno_1280x642.jpg?itok=ke9OIdwp"},
   {node_name: "Dodger Stadium", lat: 34.0746591, long: -118.241547, address: "1000 Elysian Park Avenue, Los Angeles, CA 90012", feature: "Attraction", subfeature: "arean_stadium", picture: "http://www.losangeleswalks.org/wp-content/uploads/2015/06/Dodger_Stadium.jpg"},
   {node_name: "Staples Center", lat: 34.0430175, long: -118.2672541, address: "1111 S Figueroa Street, Los Angeles, CA 90015", feature: "Attraction", subfeature: "arean_stadium", picture: "http://i.ytimg.com/vi/9TpBqR6kYnU/maxresdefault.jpg"},
-  {node_name: "Rose Bowl Stadium", lat: 34.1613284, long: -118.1676462, address: "1001 Rose Bowl Dr, Pasadena, CA 91103", feature: "Attraction", subfeature: "arean_stadium", picture: "http://i.kinja-img.com/gawker-media/image/upload/xqqgqui9c1d3vetbkj5t.jpg"}
+  {node_name: "Rose Bowl Stadium", lat: 34.1613284, long: -118.1676462, address: "1001 Rose Bowl Dr, Pasadena, CA 91103", feature: "Attraction", subfeature: "arean_stadium", picture: "http://i.kinja-img.com/gawker-media/image/upload/xqqgqui9c1d3vetbkj5t.jpg"},
+  {node_name: "Knott's Berry Farm", lat: 33.8443038, long: -118.0002265, address: " 8039 Beach Blvd, Buena Park, CA 90620", feature: "Attraction", subfeature: "Theme Parks", picture: "http://www.dadlogic.net/wp-content/uploads/2013/02/Knotts-Berry-Farm.jpg"},
+  {node_name: "Pacific Park", lat: 34.1395725, long: -118.2663666, address: " 380 Santa Monica Pier, Santa Monica, CA 90401", feature: "Attraction", subfeature: "Theme Parks", picture: "http://upload.wikimedia.org/wikipedia/commons/4/4f/Pacific_Park_Enterance.JPG"},
+  {node_name: "Raging Waters San Dimas", lat: 34.096695, long: -117.810734, address: "111 Raging Waters Dr, San Dimas, CA 91773", feature: "Attraction", subfeature: "Theme Parks", picture: "http://static.panoramio.com/photos/large/41570698.jpg"}
   ])
 
 #
