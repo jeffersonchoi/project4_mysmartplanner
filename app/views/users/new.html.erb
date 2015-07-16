@@ -109,7 +109,7 @@
 					<div class="form-group">
             <div>
               <%= f.label :date_of_birth %>
-              <%= f.date_select(:dob, :start_year => 1940, :end_year => 2010) %>
+              <%= f.text_field :dob, placeholder: "DD/MM/YYYY", id:"datetimepicker" %>
             </div>
           </div>
         </div>
@@ -189,3 +189,14 @@
 </div>
 
 <% end %>
+
+
+<script type="text/javascript">
+// jQuery('#datetimepicker').datetimepicker();
+jQuery('#datetimepicker').datetimepicker({
+ timepicker:false,
+ format:'d/m/Y',
+ startDate:'1991/09/12',
+ maxDate:'0'//tommorow is maximum date calendar
+});
+</script>

@@ -99,12 +99,15 @@
               <%= f.label :start_date, :class => "control-label"%>
 
               <div class="">
-                <%= f.date_select :start_date, :start_year => Date.today.year, :prompt => { :day => 'Select day', :month => 'Select month', :year => 'Select year' }  %>
+
+                <%= f.text_field :start_date, placeholder: "DD/MM/YYYY", id:"datetimepicker" %>
+                <!-- <%= f.date_select :start_date, :start_year => Date.today.year, :prompt => { :day => 'Select day', :month => 'Select month', :year => 'Select year' }  %> -->
 
                 <span> ----------- </span>
 
                 <%= f.label :end_date, :class => "control-label"%>
-                <%= f.date_select :end_date, :start_year => Date.today.year,:prompt => { :day => 'Select day', :month => 'Select month', :year => 'Select year' }  %>
+                <%= f.text_field :end_date, placeholder: "DD/MM/YYYY", id:"datetimepicker2" %>
+                <!-- <%= f.date_select :end_date, :start_year => Date.today.year,:prompt => { :day => 'Select day', :month => 'Select month', :year => 'Select year' }  %> -->
               </div>
 
             </div>
@@ -166,3 +169,18 @@
 
 <% end %>
 <!-- </div> -->
+<script type="text/javascript">
+// jQuery('#datetimepicker').datetimepicker();
+jQuery('#datetimepicker').datetimepicker({
+ timepicker:false,
+ format:'d/m/Y',
+ minDate:'0'//tommorow is maximum date calendar
+});
+
+// jQuery('#datetimepicker').datetimepicker();
+jQuery('#datetimepicker2').datetimepicker({
+ timepicker:false,
+ format:'d/m/Y',
+ minDate:'0'//tommorow is maximum date calendar
+});
+</script>
