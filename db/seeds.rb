@@ -44,9 +44,9 @@ Node.create([
   {node_name: "Los Angeles Memorial Sports Arena", lat: 34.0127959, long: -118.2845431, address: "3939 S Figueroa St, Los Angeles, CA 90037", feature: "Attraction", subfeature: "Arenas & Stadiums", picture: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Los_angeles_sports_arena.jpg/500px-Los_angeles_sports_arena.jpg"},
   {node_name: "StubHub Center", lat: 33.8643378, long: -118.2611224, address: "18400 Avalon Blvd, Carson, CA 90746", feature: "Attraction", subfeature: "Arenas & Stadiums", picture: "http://cdn.archinect.net/images/615x/u6/u6zkka42tcr7pa7f.jpg"},
   {node_name: "Pauley Pavilion", lat: 34.0703581, long: -118.4469123, address: "301 Westwood Plaza, Los Angeles, CA 90095", feature: "Attraction", subfeature: "Arenas & Stadiums", picture: "http://image.cdnllnwnl.xosnetwork.com/fls/30500/old_site/images/3172359.jpeg"},
-  {node_name: "California State University, Los Angeles", lat: 34.0672279, long: -118.1667405, address: "5151 State University Dr, Los Angeles, CA 90032", feature: "Attraction", subfeature: "Schools", picture: ""},
-  {node_name: "California State University, Northridge", lat: 34.2407144, long: -118.5292846, address: "18111 Nordhoff St, Northridge, CA 91330", feature: "Attraction", subfeature: "Schools", picture: ""},
-  {node_name: "Mount St. Mary's University", lat: 34.085238, long: -118.4823817, address: "12001 Chalon Rd, Los Angeles, CA 90049", feature: "Attraction", subfeature: "Schools", picture: ""}
+  {node_name: "California State University, Los Angeles", lat: 34.0672279, long: -118.1667405, address: "5151 State University Dr, Los Angeles, CA 90032", feature: "Attraction", subfeature: "Schools", picture: "http://www.thebestcolleges.org/wp-content/uploads/2011/08/California_State_University_Los_Angeles.jpg"},
+  {node_name: "California State University, Northridge", lat: 34.2407144, long: -118.5292846, address: "18111 Nordhoff St, Northridge, CA 91330", feature: "Attraction", subfeature: "Schools", picture: "http://www.bookwormroom.com/wp-content/uploads/2014/12/Cal_State_University_Northridge-300x225.jpg"},
+  {node_name: "Mount St. Mary's University", lat: 34.085238, long: -118.4823817, address: "12001 Chalon Rd, Los Angeles, CA 90049", feature: "Attraction", subfeature: "Schools", picture: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Bradley_Hall.jpg/440px-Bradley_Hall.jpg"}
   ])
 
 #
