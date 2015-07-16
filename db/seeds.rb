@@ -28,7 +28,19 @@ Node.create([
   {node_name: "Rose Bowl Stadium", lat: 34.1613284, long: -118.1676462, address: "1001 Rose Bowl Dr, Pasadena, CA 91103", feature: "Attraction", subfeature: "arean_stadium", picture: "http://i.kinja-img.com/gawker-media/image/upload/xqqgqui9c1d3vetbkj5t.jpg"},
   {node_name: "Knott's Berry Farm", lat: 33.8443038, long: -118.0002265, address: " 8039 Beach Blvd, Buena Park, CA 90620", feature: "Attraction", subfeature: "Theme Parks", picture: "http://www.dadlogic.net/wp-content/uploads/2013/02/Knotts-Berry-Farm.jpg"},
   {node_name: "Pacific Park", lat: 34.1395725, long: -118.2663666, address: " 380 Santa Monica Pier, Santa Monica, CA 90401", feature: "Attraction", subfeature: "Theme Parks", picture: "http://upload.wikimedia.org/wikipedia/commons/4/4f/Pacific_Park_Enterance.JPG"},
-  {node_name: "Raging Waters San Dimas", lat: 34.096695, long: -117.810734, address: "111 Raging Waters Dr, San Dimas, CA 91773", feature: "Attraction", subfeature: "Theme Parks", picture: "http://static.panoramio.com/photos/large/41570698.jpg"}
+  {node_name: "Raging Waters San Dimas", lat: 34.096695, long: -117.810734, address: "111 Raging Waters Dr, San Dimas, CA 91773", feature: "Attraction", subfeature: "Theme Parks", picture: "http://static.panoramio.com/photos/large/41570698.jpg"},
+  {node_name: "Hammer Museum", lat: 34.05945, long: -118.4435311, address: "10899 Wilshire Blvd, Los Angeles, CA 90024", feature: "Attraction", subfeature: "Museums", picture:""},
+  {node_name: "Natural History Museum of Los Angeles County", lat: 34.0170887, long: -118.2887598, address: "900 Exposition Blvd, Los Angeles, CA 90007", feature: "Attraction", subfeature: "Museums", picture: ""},
+  {node_name: "Fowler Museum at UCLA", lat: 34.0729274, long: -118.442983, address: "308 Charles E Young Dr N, Los Angeles, CA 90024", feature: "Attraction", subfeature: "Museums", picture: ""},
+  {node_name: "Dockweiler State Beach", lat: 33.9422601, long: -118.4424214, address: "12000 Vista del Mar, Playa del Rey, CA 90293", feature: "Attraction", subfeature: "Beaches", picture: ""},
+  {node_name: "Will Rogers Beach", lat: 34.0392744, long: -118.5500771, address: "17000 Pacific Coast Hwy, Pacific Palisades, CA 90272", feature: "Attraction", subfeature: "Beaches", picture: ""},
+  {node_name: "Mother's Beach", lat: 33.9812522, long:-118.4577449, address: "4101 Admiralty Way, Marina Del Rey, CA 90292", feature: "Attraction", subfeature: "Beaches", picture: ""},
+  {node_name: "Westfield Century City", lat: 34.058677, long: -118.418873, address: "10250 Santa Monica Blvd, Los Angeles, CA 90067", feature: "Attraction", subfeature: "Shopping", picture:""},
+  {node_name: "Madison Brentwood", lat: 34.054253, long: -118.4648945, address: "Brentwood Gardens, 11677 San Vicente Blvd, Los Angeles, CA 90049", feature: "Attraction", subfeature: "Shopping", picture: ""},
+  {node_name: "Westside Pavilion", lat: 34.0401391, long: -118.4274689, address: "10800 West Pico Boulevard, Suite 312, Los Angeles, CA 90064", feature: "Attraction", subfeature: "Shopping", picture: ""},
+  {node_name: "Hollywood Bowl", lat: 34.112224, long: -118.3391279, address: "2301 Highland Ave, Los Angeles, CA 90068", feature: "Attraction", subfeature: "Sights & Landmarks", picture: ""},
+  {node_name: "Los Angeles City Hall", lat: 34.0537136, long: -118.2426533, address: "200 N Spring St, Los Angeles, CA 90012", feature: "Attraction", subfeature: "Sights & Landmarks", picture: ""},
+  {node_name: "La Brea Tar Pits", lat: 34.0637876, long: -118.3554337, address: "5801 Wilshire Blvd, Los Angeles, CA 90036", feature: "Attraction", subfeature: "Sights & Landmarks", picture: ""}
   ])
 
 #
