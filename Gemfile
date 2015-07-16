@@ -30,9 +30,9 @@ gem 'city-state'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
-
-gem 'rails-assets-datetimepicker'
-
+source 'https://rails-assets.org' do
+  gem 'rails-assets-datetimepicker'
+end
 
 gem 'searchkick'
 # Use Unicorn as the app server
