@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   post '/login'    => 'sessions#create'
   delete '/logout' => 'sessions#destroy'
   get '/travizi' => 'staticpages#travizi'
+  get '/madliberator' => 'staticpages#madliberator'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
