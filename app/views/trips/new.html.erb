@@ -16,6 +16,7 @@
             <!-- Text input-->
             <div class="form-group">
               <%= f.label :destination, class:" control-label" %>
+              <span> (Beta Version currently only supports Los Angeles) </span>
               <!-- <label class=" control-label" for="textinput">Username</label> -->
               <div class="">
                 <!-- <input id="textinput" name="textinput" placeholder="Username" class="form-control input-md" type="text"> -->
@@ -46,6 +47,7 @@
             <div class="form-group">
               <span> $ </span>
               <%= f.label :budget_in_usd %>
+              <span> (Beta Version is currently under testing) </span>
               <div class= "">
                 <%= f.number_field :budget, :class => 'text_field', :step => 'any' %>
               </div>
