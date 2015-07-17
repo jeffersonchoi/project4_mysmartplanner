@@ -44,7 +44,7 @@
                     <li><%= link_to "Madliberator, Have some fun!", madliberator_path%></li>
                     <li><%= link_to "Applied Meaning, Design your life!", appliedmeaning_path%></li>
                     <li><%= link_to "Qwickbit, Spend your bitcoin!", qwickbit_path%></li>
-                    <li><%= link_to "Gotbread, Taste a nice bread!", gotbread_path%></li>  
+                    <li><%= link_to "Gotbread, Taste a nice bread!", gotbread_path%></li>
                   </ul>
               </li>
 
@@ -52,7 +52,7 @@
             <ul class="nav navbar-nav navbar-right">
 
             <% if current_user %>
-              <li class="navbar-text"> Welcome, <%= current_user.first_name %>! </li>
+              <li class="navbar-text"> Welcome back, <%= current_user.first_name %>! </li>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Account Settings <b class="caret"></b></a>
                   <ul class="dropdown-menu">
