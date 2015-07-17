@@ -1,6 +1,6 @@
 ---README---
 
-#MySmartPlanner
+#MySmartPlanner by Jefferson 2015
 ##(http://www.mysmartplanner.org)
 
 * Rail version 4.2.1
