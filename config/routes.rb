@@ -21,6 +21,7 @@ Rails.application.routes.draw do
   get '/qwickbit' => 'staticpages#qwickbit'
   get '/gotbread' => 'staticpages#gotbread'
   get '/developer' => 'staticpages#jefferson'
+  get '/crowdtap' => 'staticpages#crowdtap'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
