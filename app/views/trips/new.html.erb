@@ -1,68 +1,3 @@
-<!--
-
-  <h1> Pre Trip Survey </h1>
-
-  <%= form_for @trip do |f| %>
-  <div>
-    <%= f.label :destination %>
-    <%= f.select :destination, CS.cities(:ca, :us)  %>
-  </div>
-  <div>
-    <%= f.label :start_date, :class => "control-label"%>
-    <%= f.date_select :start_date, :start_year => Date.today.year, :prompt => { :day => 'Select day', :month => 'Select month', :year => 'Select year' }  %>
-  </div>
-  <div>
-    <%= f.label :end_date, :class => "control-label"%>
-    <%= f.date_select :end_date, :start_year => Date.today.year,:prompt => { :day => 'Select day', :month => 'Select month', :year => 'Select year' }  %>
-  </div>
-
-  <div>
-    <%= f.label :budget_in_usd %>
-    <%= f.number_field :budget, :class => 'text_field', :step => 'any' %>
-  </div>
-
-  <div>
-    <%= f.label :hours_per_day %>
-    <%= f.number_field :hours_per_day, :class => 'text_field', :step => 'any' %>
-  </div>
-
-  <%= fields_for @interest do |u| %>
-  <div>
-      <%= u.label :theme_park %>
-      <%= u.check_box :theme_park, {}, "true" %>
-
-      <%= u.label :museum %>
-      <%= u.check_box :museum, {}, "true" %>
-
-      <%= u.label :beach %>
-      <%= u.check_box :beach, {}, "true" %>
-
-      <%= u.label :shopping %>
-      <%= u.check_box :shopping, {}, "true" %>
-
-      <%= u.label :sight_landmark %>
-      <%= u.check_box :sight_landmark, {}, "true" %>
-
-      <%= u.label :arean_stadium %>
-      <%= u.check_box :arean_stadium, {}, "true" %>
-
-      <%= u.label :school %>
-      <%= u.check_box :school, {}, "true" %>
-  </div>
-
-
-
-   <% end %>
-
-
-
-
-  <div>
-    <%= f.submit class: "btn btn-primary" %>
-  </div>
-
-  <% end %> -->
-
 
 <!-- <div class="trip-background"> -->
   <%= form_for @trip do |f| %>
@@ -76,11 +11,6 @@
             <!-- Form Name -->
             <legend> <small>Let us do the work!</samll></legend>
 
-            <!-- <div class="btn-group">
-              <a href="index.html" class="btn btn-default">All</a>
-              <a href="example1.html" class="btn btn-default">example 1</a>
-              <a href="example2.html" class="btn btn-default">example 2</a>
-            </div> -->
 
 
             <!-- Text input-->
@@ -97,7 +27,8 @@
             <!-- Password input-->
             <div class="form-group">
               <%= f.label :start_date, :class => "control-label"%>
-
+                <span> --------------------------- </span>
+              <%= f.label :end_date, :class => "control-label"%>
               <div class="">
 
                 <%= f.text_field :start_date, placeholder: "DD/MM/YYYY", id:"datetimepicker" %>
@@ -105,7 +36,7 @@
 
                 <span> ----------- </span>
 
-                <%= f.label :end_date, :class => "control-label"%>
+
                 <%= f.text_field :end_date, placeholder: "DD/MM/YYYY", id:"datetimepicker2" %>
                 <!-- <%= f.date_select :end_date, :start_year => Date.today.year,:prompt => { :day => 'Select day', :month => 'Select month', :year => 'Select year' }  %> -->
               </div>
@@ -113,6 +44,7 @@
             </div>
 
             <div class="form-group">
+              <span> $ </span>
               <%= f.label :budget_in_usd %>
               <div class= "">
                 <%= f.number_field :budget, :class => 'text_field', :step => 'any' %>
@@ -122,6 +54,7 @@
 
             <div class="form-group">
               <%= f.label :average_hours_per_day %>
+              <span> (betwee 6 to 12  hours) </span>
               <div class= "">
                 <%= f.number_field :hours_per_day, :class => 'text_field', :step => 'any' %>
               </div>
@@ -132,6 +65,7 @@
 
             <%= fields_for @interest do |u| %>
             <%= u.label :choose_from_the_following_which_interest_you %>
+            <span> (select at least 2 options) </span>
             <div class="form-group">
               <div class="">
                 <span>1. </span>
