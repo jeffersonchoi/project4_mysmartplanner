@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   get '/madliberator' => 'staticpages#madliberator'
   get '/appliedmeaning' => 'staticpages#appliedmeaning'
   get '/qwickbit' => 'staticpages#qwickbit'
+  get '/developer' => 'staticpages#jefferson'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
