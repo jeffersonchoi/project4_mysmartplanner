@@ -29,7 +29,14 @@
               <% if current_user %>
                   <li><%= link_to "New Trip", new_trip_path%></li>
               <% end %>
-<!--               <li><a href="#">Page B</a></li> -->
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Account Settings <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><%= link_to "Edit My Account", edit_user_path(current_user)%></li>
+                    <li><%= link_to "View My Trips ", trips_path%></li>
+<!--                     <li>Page C - 3</li> -->
+                  </ul>
+              </li>
 
             </ul>
             <ul class="nav navbar-nav navbar-right">
