@@ -12,7 +12,7 @@ class Trip < ActiveRecord::Base
 
 private
 
-
+#so that start date wont be before today
 def start_date_cannot_be_in_the_past
  errors.add(:start_date, "can't be in the past") if
    !start_date.blank? and start_date < Date.today

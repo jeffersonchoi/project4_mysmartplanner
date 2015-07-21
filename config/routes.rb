@@ -19,5 +19,5 @@ Rails.application.routes.draw do
   get '/developer' => 'staticpages#jefferson'
   get '/crowdtap' => 'staticpages#crowdtap'
   get '/costaricacafe' => 'staticpages#costaricacafe'
-
+  
 end
